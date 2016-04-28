@@ -36,5 +36,9 @@ namespace Linterest.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Linterest.Models.Lin> Lins { get; set; }
     }
+    
+    
 }

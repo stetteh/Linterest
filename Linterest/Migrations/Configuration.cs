@@ -34,6 +34,7 @@ namespace Linterest.Migrations
             var userStore = new UserStore<LinterestUser>(context);
             var userManager = new UserManager<LinterestUser>(userStore);
             var roleStore = new RoleStore<IdentityRole>(context);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
 
 
 
@@ -96,89 +97,114 @@ namespace Linterest.Migrations
                     Author = Luke,
                     CreatedOn = DateTime.Now.AddDays(-3),
                     Text = "Omg my dog ate all my grilled chicken and drunk all my vodka",
-                    ImageUrl = "http://cx.aos.ask.com/question/aq/1400px-788px/can-dogs-eat-turkey-bones_ddee09800a124de9.jpg",
-                    PinImageUrl = "http://cx.aos.ask.com/question/aq/1400px-788px/can-dogs-eat-turkey-bones_ddee09800a124de9.jpg",
+                    ImageUrl =
+                        "http://cx.aos.ask.com/question/aq/1400px-788px/can-dogs-eat-turkey-bones_ddee09800a124de9.jpg",
+                    PinImageUrl =
+                        "http://cx.aos.ask.com/question/aq/1400px-788px/can-dogs-eat-turkey-bones_ddee09800a124de9.jpg",
                 });
                 Ann.Lins.Add(new Lin()
                 {
                     Author = Ann,
                     CreatedOn = DateTime.Now,
-                    Text = "I love this dress, but the price tag is hefty"
+                    Text = "Pretty Nice",
+                    ImageUrl = "http://i.imgur.com/xDpbkSc.jpg",
+                    PinImageUrl = "http://i.imgur.com/xDpbkSc.jpg",
+
                 });
                 Ann.Lins.Add(new Lin()
                 {
                     Author = Ann,
                     CreatedOn = DateTime.Now,
-                    Text = "I have such an awesome cat, i adore you nickred"
+                    Text = "I have such an awesome kitten, i adore you nickred",
+                    ImageUrl =
+                        "http://images2.fanpop.com/image/photos/9700000/Adorable-lil-Kittens-cute-kittens-9781743-670-578.jpg",
+                    PinImageUrl =
+                        "http://images2.fanpop.com/image/photos/9700000/Adorable-lil-Kittens-cute-kittens-9781743-670-578.jpg",
                 });
                 Ann.Lins.Add(new Lin()
                 {
                     Author = Ann,
                     CreatedOn = DateTime.Now.AddHours(-5),
-                    Text = "Clinton for president, Sander for vice, woman power, got to rule the world"
+                    Text = "how i feel when i get stuck coding",
+                    ImageUrl =
+                        "http://vignette1.wikia.nocookie.net/cardfight/images/f/fb/Keep-calm-and-may-the-odds-be-ever-in-your-favor-57.png/revision/latest?cb=20150326090112",
+                    PinImageUrl =
+                        "http://vignette1.wikia.nocookie.net/cardfight/images/f/fb/Keep-calm-and-may-the-odds-be-ever-in-your-favor-57.png/revision/latest?cb=20150326090112",
+
                 });
                 Jerry.Lins.Add(new Lin()
                 {
                     Author = Jerry,
                     CreatedOn = DateTime.Now.AddHours(3),
-                    Text =
-                        "How could Barcelona loose this game, they better call Merci to book, cant pay all this money for nothing"
+                    Text = "My favorite Barcelona",
+                    ImageUrl = "https://media.timeout.com/images/101851347/image.jpg",
+                    PinImageUrl = "https://media.timeout.com/images/101851347/image.jpg",
+
                 });
                 Jerry.Lins.Add(new Lin()
                 {
                     Author = Jerry,
                     CreatedOn = DateTime.Now.AddDays(-1),
-                    Text = "Ronaldo better bring his game on today, Real Madrib better nail Manchester United bad"
+                    Text = "There are soccer teams and then there is the Soccer Team",
+                    ImageUrl = "http://storage.zideo.nl/channel/6c5953566e673d3d/FCBarcelona0809.jpg",
+                    PinImageUrl = "http://storage.zideo.nl/channel/6c5953566e673d3d/FCBarcelona0809.jpg",
                 });
                 Jerry.Lins.Add(new Lin()
                 {
                     Author = Jerry,
                     CreatedOn = DateTime.Now,
-                    Text = "Footbal state of mind"
+                    Text = "Footbal state of mind",
+                    ImageUrl =
+                        "http://timleberecht.com/wp/wp-content/uploads/2015/06/AAEAAQAAAAAAAAJHAAAAJGM2NzNjYTY3LWZhODgtNDQ2Yy04NmE5LTViZGIyN2FmMGI1Yg.jpg",
+                    PinImageUrl =
+                        "http://timleberecht.com/wp/wp-content/uploads/2015/06/AAEAAQAAAAAAAAJHAAAAJGM2NzNjYTY3LWZhODgtNDQ2Yy04NmE5LTViZGIyN2FmMGI1Yg.jpg",
+
                 });
                 Jerry.Lins.Add(new Lin()
                 {
                     Author = Jerry,
                     CreatedOn = DateTime.Now.AddDays(-5),
-                    Text =
-                        "Heading to New York to watch NYC FC vs NY Generals, MAY THE ODDS BE IN THE BEST TEAMS FAVOR "
+                    Text = "My Other team, never say never",
+                    ImageUrl = "http://gazettereview.com/wp-content/uploads/2015/10/Manchester-City.jpg",
+                    PinImageUrl = "http://gazettereview.com/wp-content/uploads/2015/10/Manchester-City.jpg",
                 });
                 Izzy.Lins.Add(new Lin()
                 {
                     Author = Izzy,
                     CreatedOn = DateTime.Now,
-                    Text = "bATMAN vs sUPERMAN...EPIC MOVIE..."
+                    Text = "bATMAN vs sUPERMAN...EPIC MOVIE...",
+                    ImageUrl = "http://945kski.com/wp-content/uploads/2016/02/2015-movie-batman-vs-superman-42469.jpg",
+                    PinImageUrl =
+                        "http://945kski.com/wp-content/uploads/2016/02/2015-movie-batman-vs-superman-42469.jpg",
+
                 });
                 Izzy.Lins.Add(new Lin()
                 {
                     Author = Izzy,
                     CreatedOn = DateTime.Now,
-                    Text = "Ironyard Little Rock graduation in 4 weeks, gonna turn up"
+                    Text = "Ironyard Little Rock graduation in 4 weeks, gonna turn up",
+                    ImageUrl =
+                        "http://static.srcdn.com/slir/w700-h350-q90-c700:350/wp-content/uploads/Avengers-Age-of-Ultron-Guide.jpg",
+                    PinImageUrl =
+                        "http://static.srcdn.com/slir/w700-h350-q90-c700:350/wp-content/uploads/Avengers-Age-of-Ultron-Guide.jpg",
                 });
                 Izzy.Lins.Add(new Lin()
                 {
                     Author = Izzy,
                     CreatedOn = DateTime.Now.AddHours(-10),
-                    Text = "i love me some ice cream, who is with me"
+                    Text = "Super Hero Movie Maniac",
+                    ImageUrl = "http://cdn1.sciencefiction.com/wp-content/uploads/2015/07/the-flash-concept-art.jpg",
+                    PinImageUrl = "http://cdn1.sciencefiction.com/wp-content/uploads/2015/07/the-flash-concept-art.jpg",
+
                 });
 
-                Izzy.Following.Add(Luke);
-                Izzy.Following.Add(Jerry);
-                Izzy.Following.Add(Ann);
+                context.Lins.AddRange(Luke.Lins);
+                context.Lins.AddRange(Jerry.Lins);
+                context.Lins.AddRange(Ann.Lins);
+                context.Lins.AddRange(Izzy.Lins);
 
-                Luke.Following.Add(Izzy);
-                Luke.Following.Add(Jerry);
-
-                Ann.Following.Add(Luke);
-                Ann.Following.Add(Jerry);
-
-                Jerry.Following.Add(Luke);
-
-                context.Newts.AddRange(Luke.Newts);
-                context.Newts.AddRange(Ann.Newts);
-                context.Newts.AddRange(Jerry.Newts);
-                context.Newts.AddRange(Izzy.Newts);
 
             }
         }
+    }
 }

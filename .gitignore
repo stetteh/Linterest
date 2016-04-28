@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Linterest/Migrations/Configuration.cs

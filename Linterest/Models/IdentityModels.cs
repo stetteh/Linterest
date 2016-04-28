@@ -20,7 +20,9 @@ namespace Linterest.Models
         }
 
         public string Handle { get; set; }
-        public virtual List<Lin> Lins { get; set; } = new List<Lin>();
+        public virtual ICollection<Lin> Lins { get; set; } = new List<Lin>();
+        public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<LinterestUser>

@@ -24,4 +24,11 @@ namespace Linterest.Models
         public virtual Lin ParentLin { get; set; }
         public DateTime CommentDate { get; set; }
     }
+
+    public class CreateLinVM
+    {
+        public string Text { get; set; }
+        public string ImageUrl { get; set; }
+        public string PinImageUrl { get; set; }
+    }
 }

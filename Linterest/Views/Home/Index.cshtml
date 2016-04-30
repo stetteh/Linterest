@@ -4,16 +4,15 @@
 
 <h2>{{ 1 + 1 }}</h2>
 
-<h2>{{ 1 == 10 }}</h2>
-
+<h1>{{1 ==24}}</h1>
 <div ng-controller="LinsController">
     <div ng-repeat="l in Lins">
-        {{ l.CreatedOn}}
-        {{ l.Author.Handle }}
-        {{ l.Text }}
-        {{ l.NUmOfComments }}
-        <a href="{{l.PinImageUrl}}">
-            <img class="img-responsive img-thumbnail" style="width: 200px;" ng-src="{{ l.ImageUrl }}" alt="" />
+        {{ l.CreatedOn }}
+        {{ l.Name }}
+        {{ l.Pintext }}
+        {{ l.NumOfComments }}
+        <a href="{{l.LinkImage}}">
+            <img class="img-responsive img-thumbnail" style="width: 200px;" ng-src="{{ l.Image }}" alt="" />
         </a>
     </div>
 

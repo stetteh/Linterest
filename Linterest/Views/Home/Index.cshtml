@@ -2,28 +2,56 @@
     ViewBag.Title = "Home Page";
 }
 
-<h2>{{ 1 + 1 }}</h2>
-
-<h1>{{1 ==24}}</h1>
-<div ng-controller="LinsController">
-    <div ng-repeat="l in Lins">
-        {{ l.CreatedOn }}
-        {{ l.Name }}
-        {{ l.Pintext }}
-        {{ l.NumOfComments }}
-        <a href="{{l.LinkImage}}">
-            <img class="img-responsive img-thumbnail" style="width: 200px;" ng-src="{{ l.Image }}" alt="" />
-        </a>
+<div ng-controller="LinsController" class="linsdisplay">
+    <div class="container">
+        <div class="row">
+            <div class="item col-md-4" ng-repeat="l in Lins">
+                <div class="well text-center">
+                    <a href="{{l.LinkImage }}">
+                        <img class="img-responsive img-rounded" src="{{l.Image}}" />
+                    </a>
+                    <br />
+                    <p>{{l.Pintext}}</p>
+                    <p>submitted {{l.CreatedOn}} by {{l.Name}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <form>
-        <div class="form-group">
-            ImageUrl:
-            <input type="text" name="ImageUrl" value="" ng-model="newLin.PhotoUrl" />
+    <div class="container text-right">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Lin</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-left">New Pin</h4>
+                    </div>
+                    <div class="modal-body text-left">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="PhotoUrl">Your Image</label>
+                                <input class="form-control" type="text" ng-model="newLin.PhotoUrl"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="PhotoUrl">Your Image Link</label>
+                                <input class="form-control" type="text" ng-model="newLin.LinkImage" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Text">Text</label>
+                                <input class="form-control" type="text" ng-model="newLin.Text"/>
+                            </div>
+                            <button type="button" ng-click="saveLin()">Create Lin</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            Text: <input type="text" name="Text" value="" ng-model="newLin.Text" />
-        </div>
-        <input class="btn btn-primary" type="button" ng-click="saveLin()" value="Save Lin" />
-    </form>
+    </div>
 </div>

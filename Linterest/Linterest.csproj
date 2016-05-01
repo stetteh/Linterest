@@ -182,6 +182,10 @@
     <Compile Include="Migrations\201604282043007_initialtbles.Designer.cs">
       <DependentUpon>201604282043007_initialtbles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605010229290_update.cs" />
+    <Compile Include="Migrations\201605010229290_update.Designer.cs">
+      <DependentUpon>201605010229290_update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -265,6 +269,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604282043007_initialtbles.resx">
       <DependentUpon>201604282043007_initialtbles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605010229290_update.resx">
+      <DependentUpon>201605010229290_update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
